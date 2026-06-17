@@ -194,9 +194,9 @@ class MainWindow(QtWidgets.QMainWindow):
 
         # ------------------ LEFT SIDE PANEL (Controls) ------------------
         scroll_area = QtWidgets.QScrollArea()
-        scroll_area.setWidgetResizable(True)
-        scroll_area.setFixedWidth(340)
-        scroll_area.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
+        scroll_area.setHorizontalScrollBarPolicy(
+            QtCore.Qt.ScrollBarPolicy.ScrollBarAlwaysOff
+        )
 
         panel = QtWidgets.QWidget()
         panel_layout = QtWidgets.QVBoxLayout(panel)

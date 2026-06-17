@@ -24,3 +24,7 @@ Run the application using `uv`:
 ```bash
 uv run python app.py
 ```
+
+## License
+MIT license.
+Made with ✨Gemini 3.5.

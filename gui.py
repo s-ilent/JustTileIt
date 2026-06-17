@@ -651,13 +651,23 @@ class MainWindow(QtWidgets.QMainWindow):
     def save_file(self):
         if self.processed_tensor is None:
             return
-        file_path, _ = QFileDialog.getSaveFileName(
+        
+        file_path, selected_filter = QFileDialog.getSaveFileName(
             self,
             "Save Seamless Texture",
             "",
             "PNG Files (*.png);;JPEG Files (*.jpg);;Targa Files (*.tga)",
         )
         if file_path:
+            # Handle missing extension
+            if not os.path.splitext(file_path)[1]:
+                if "JPEG" in selected_filter:
+                    file_path += ".jpg"
+                elif "Targa" in selected_filter:
+                    file_path += ".tga"
+                else:
+                    file_path += ".png"
+
             try:
                 cpu_tensor = self.processed_tensor.detach().cpu().clamp(0.0, 1.0)
                 c, h, w = cpu_tensor.shape

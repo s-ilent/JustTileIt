@@ -2,6 +2,8 @@
 
 A desktop application for generating seamless textures from source images, featuring multiple tiling algorithms and real-time previews.
 
+<img width="1754" height="1414" alt="Screenshot" src="https://github.com/user-attachments/assets/46048078-4c34-4514-8309-6cc4bd854015" />
+
 ## Features
 - **Seamless Tiling Algorithms:** Substance-style layered tiling, radial masks, half-shifts, and mirrored collages.
 - **Pre-processing:** Automated lighting equalization and crop controls.
